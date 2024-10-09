@@ -1,40 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fox Trail's Adventure</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <title>Particle</title>
     <style>
         body {
             
             margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: url(assets/background1.jpg) no-repeat center center fixed;
+     
+        }
 
-            background-size: cover;
-            color: #fff;
-            overflow: hidden;
-        }
-        .hero {
-            padding-top: 400px;
-            height: calc(100vh - 400px);
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        h1 {
+
+        
+        
+         h1 {
             font-size: 4em;
             text-shadow: 2px 2px 4px #666666;
             z-index: 10;
             
-        }
+        } 
         a {
             text-decoration: none;
         }
@@ -44,82 +29,66 @@
             padding: 10px 20px;
             border: none;
             border-radius: 10px;
-            background-color: #87d2a5;
-            color: black;
+            background-color: #ffcc00;
+            color: #000;
             cursor: pointer;
             box-shadow: 2px 2px 10px #000;
             transition: transform 0.2s;
             z-index: 10;
-            font-family: "Play", sans-serif;
-  font-weight: 400;
-  font-style: normal;
         }
         button:hover {
             transform: translateY(3px);
             box-shadow: 2px 2px 5px #000;
         }
-    
 
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
+        #full {
+
+            margin-top: -50%;
+            background-color: #000;
+            height: 500px;
             width: 100%;
-            height: 70%;
-            overflow: hidden;
-            z-index: -1;
-        }
-        .star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: white;
-            border-radius: 50%;
-            opacity: 0;
+            padding: 0;
+            height: 600px;
+    
+            z-index:1;
+            opacity: 62%;
             
-        }
-       
-    </style>
-        <link rel="icon" href="assets/fox-face-emoji-512x482-m4yckvu1.png" type="image/x-icon"> 
 
+        }
+
+        .hero {
+
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 600px;
+            z-index: 2;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: url(WhatsApp\ Image\ 2024-10-09\ at\ 11.43.35_7e4dd687.jpg) no-repeat center center fixed;
+
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
+
+        }
+
+        
+    </style>
 </head>
 <body>
+
+
    <div class="hero">
-         <h1>Fox Trail's Adventure</h1>
-         <a href="game.html">
-            <button>Let's Go</button>
+         <h1>Click To Enter</h1>
+         <a href="index.html">
+            <button>Enter</button>
          </a>
-          
+           
    </div>
-   <div class="stars" id="stars"></div>
-   <script>
-
-
    
+   <div id="full">
 
-
+   </div>
    
-    const starsContainer = document.getElementById('stars');
-    const numStars = 200;
-
-    for (let i = 0; i < numStars; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.top = `${Math.random() * 100}vh`;
-        star.style.left = `${Math.random() * 100}vw`;
-        star.style.animationDelay = `${Math.random() * 2}s`;
-        starsContainer.appendChild(star);
-    }
-    function blinkStars() {
-        const stars = document.querySelectorAll('.star');
-        stars.forEach(star => {
-            star.style.opacity = Math.random() ;
-        });
-        setTimeout(blinkStars, 1000);
-    }
-
-    blinkStars();
-</script>
- 
 </body>
 </html>
